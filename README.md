@@ -2,7 +2,7 @@
 
 A full-stack Support Ticket Management System built using Next.js, TypeScript, ASP.NET Core Web API, Entity Framework Core, and SQL Server.
 
-The application allows users to create, view, edit, search, filter, sort, paginate, and delete support tickets.
+The application allows users to create, view, edit, search, filter, sort, paginate, update status, and delete support tickets.
 
 ---
 
@@ -29,20 +29,28 @@ Authentication/JWT is not required for this project.
 ## Technologies Used
 
 ### Frontend
+
 - Next.js
 - TypeScript
 - React
 - Tailwind CSS
 
 ### Backend
+
 - C#
 - ASP.NET Core Web API
 - Entity Framework Core
 - Swagger / OpenAPI
 
 ### Database
+
 - SQL Server
 - Entity Framework Core
+
+### Testing
+
+- xUnit
+- Entity Framework Core InMemory Database
 
 ---
 
@@ -105,12 +113,32 @@ Dashboard statistics include:
 
 ---
 
+## Additional Features
+
+- Responsive UI
+- Loading states
+- Error handling
+- Empty result handling
+- Client-side form validation
+- Server-side validation
+- Swagger API documentation
+- Dark/Light mode
+- Sorting by Created Date, Priority, and Status
+- Unit tests for important service operations
+
+---
+
 ## Project Structure
 
 ```text
 SupportTicketProject/
 │
 ├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── lib/
+│   ├── public/
+│   └── package.json
 │
 ├── SupportTicketAPI/
 │   ├── Controllers/
@@ -119,7 +147,12 @@ SupportTicketProject/
 │   ├── Models/
 │   ├── Data/
 │   ├── Migrations/
-│   └── Program.cs
+│   ├── Program.cs
+│   └── SupportTicketAPI.csproj
+│
+├── TestProject1SupportTicketAPI.Tests/
+│   ├── UnitTest1.cs
+│   └── SupportTicketAPI.Tests.csproj
 │
 ├── README.md
 └── .gitignore
